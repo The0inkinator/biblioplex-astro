@@ -3,3 +3,12 @@
   margin: 0;
   padding: 0;
 }
+
+@font-face {
+  font-family: "Modern Sans";
+  src: url("../../public/ModernSans-Light.otf");
+}
+
+.pageHeight {
+  min-height: calc(100vh - 14rem);
+}

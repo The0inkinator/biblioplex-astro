@@ -1,0 +1,53 @@
+---
+import "../styles/bibGlobal.css"
+---
+<header>
+    <div class="headerBar">
+        <a href="/" class="logo"></a>
+        <ul class="headerMenu">
+            <li class="headerMenuItem">Start Searching</li>
+            <li class="headerMenuItem">Archives</li>
+            <li class="headerMenuItem">Account</li>
+        </ul>
+
+    </div>
+</header>
+
+<style>
+.headerBar {
+    height: 7rem;
+    background: linear-gradient(to bottom, hsl(200, 42%, 62%), hsl(200, 65%, 50%));
+    display: flex;
+    align-items: center;
+    font-family: Modern Sans, Arial, sans-serif;
+
+}
+
+.logo {
+    background-image: url("public/biblioplexLogo.svg");
+    height: 60%;
+    aspect-ratio: 1/1;
+    margin: 1.5rem;
+    cursor: pointer;
+}
+
+.headerMenu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.headerMenuItem {
+    cursor: pointer;
+    color: rgb(230, 230, 230);
+    transition: color 0.25s;
+}
+
+.headerMenuItem:hover {
+    color: hsl(200, 50%, 34%);
+}
+
+
+</style>
