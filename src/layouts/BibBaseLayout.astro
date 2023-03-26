@@ -15,7 +15,17 @@ const {pageTitle} = Astro.props;
 	</head>
 	<Header />
 	<div class="pageHeight">
-		<slot />
+		<div class="allPages">
+			<slot />
+		</div>
 	</div>
 	<Footer />
 </html>
+
+<style>
+	.allPages {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+</style>

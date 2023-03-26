@@ -1,8 +1,65 @@
 ---
+import NavCard from "../components/NavCard.astro";
 import BibBaseLayout from "../layouts/BibBaseLayout.astro";
 const pageTitle = "Start Searching"
 ---
 
 <BibBaseLayout pageTitle ={pageTitle}>
-<div>start searching</div>
+<h1>START SEARCHING</h1>
+<div class="searchBarContainer">
+	<div class="searchBarStyle"></div>
+	<input type="text" placeholder="Begin here...">
+</div>
+<NavCard title="One" subtitle="A valid subtitle" imgNum="image2"/>
 </BibBaseLayout>
+
+<style>
+	h1 {
+		font-family: Modern Sans, arial, sans-serif;
+		font-size: 6rem;
+		font-weight: 800;
+		margin-block: 3rem;
+		background-image: linear-gradient(to top, white, 40%, var(--BibBlue));
+ 		background-clip: text;
+ 		-webkit-background-clip: text;
+  		color: transparent;
+	}
+	
+	.searchBarContainer {
+		height: 3rem;
+		width: 35rem;
+		display: grid;
+		margin-bottom: 4rem;
+	}
+
+	.searchBarContainer > * {
+		grid-column: 1/-1;
+		grid-row: 1/-1;
+		align-self: center;
+		height: 100%;
+		width: 100%;
+	}
+	
+	.searchBarContainer > input {
+		outline: none;
+		border: none;
+		background-color: transparent;
+ 		padding-block: 0.25rem;
+ 		padding-inline: 1rem;
+		font-family: Modern Sans, Arial, Helvetica, sans-serif;
+		font-size: 1rem;
+		color: hsl(0, 0%, 80%);
+	}
+
+	.searchBarContainer:hover > .searchBarStyle {
+		border: 0.18rem solid hsl(200, 50%, 40%);
+		border-radius: 10px;
+
+	}
+
+	.searchBarStyle {
+		border: 0.18rem solid hsl(200, 50%, 50%);
+		border-radius: 15px;
+		transition: border 0.25s, border-radius 0.25s;
+	}
+</style>
