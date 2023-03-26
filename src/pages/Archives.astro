@@ -1,12 +1,10 @@
 ---
+import NavCardGrid from "../components/NavCardGrid.astro";
 import BibBaseLayout from "../layouts/BibBaseLayout.astro";
 const pageTitle = "Archives"
 ---
 
 <BibBaseLayout pageTitle ={pageTitle}>
 <div>Archives</div>
-<button>Hello</button>
-<script>
-    document.querySelector("button").addEventListener("click", () => console.log("Hello"))
-</script>
+<NavCardGrid />
 </BibBaseLayout>

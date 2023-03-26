@@ -1,7 +1,8 @@
 ---
-import NavCard from "../components/NavCard.astro";
+import NavCardGrid from "../components/NavCardGrid.astro";
 import BibBaseLayout from "../layouts/BibBaseLayout.astro";
 const pageTitle = "Start Searching"
+
 ---
 
 <BibBaseLayout pageTitle ={pageTitle}>
@@ -10,7 +11,7 @@ const pageTitle = "Start Searching"
 	<div class="searchBarStyle"></div>
 	<input type="text" placeholder="Begin here...">
 </div>
-<NavCard title="One" subtitle="A valid subtitle" imgNum="image2"/>
+<NavCardGrid />
 </BibBaseLayout>
 
 <style>
