@@ -18,9 +18,8 @@ import NavCard from "./NavCard.astro";
 
     .navCardGrid {
         display: grid;
-        grid-template-columns: repeat(var(--columnCount), 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
         grid-gap: 2rem;
-        grid-auto-flow: dense;
     }
 
     @media (max-width: 1190px) {
