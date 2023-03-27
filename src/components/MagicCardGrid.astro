@@ -1,12 +1,37 @@
 ---
 import MagicCard from "./MagicCard.astro";
-
 ---
 
 <div class="magicCardGridContainer">
-    <MagicCard cardIMGURL = "https://cards.scryfall.io/large/front/7/8/78fb8900-d28d-4e33-96a7-66fcbc117adf.jpg?1634348984" />
+  <MagicCard
+    cardIMGURL="https://cards.scryfall.io/large/front/7/8/78fb8900-d28d-4e33-96a7-66fcbc117adf.jpg?1634348984"
+  />
+  <MagicCard
+    cardIMGURL="https://cards.scryfall.io/large/front/7/8/78fb8900-d28d-4e33-96a7-66fcbc117adf.jpg?1634348984"
+  />
+  <MagicCard
+    cardIMGURL="https://cards.scryfall.io/large/front/7/8/78fb8900-d28d-4e33-96a7-66fcbc117adf.jpg?1634348984"
+  />
+  <MagicCard
+    cardIMGURL="https://cards.scryfall.io/large/front/7/8/78fb8900-d28d-4e33-96a7-66fcbc117adf.jpg?1634348984"
+  />
+  <MagicCard
+    cardIMGURL="https://cards.scryfall.io/large/front/7/8/78fb8900-d28d-4e33-96a7-66fcbc117adf.jpg?1634348984"
+  />
+  <MagicCard
+    cardIMGURL="https://cards.scryfall.io/large/front/7/8/78fb8900-d28d-4e33-96a7-66fcbc117adf.jpg?1634348984"
+  />
+  <MagicCard
+    cardIMGURL="https://cards.scryfall.io/large/front/7/8/78fb8900-d28d-4e33-96a7-66fcbc117adf.jpg?1634348984"
+  />
 </div>
 
 <style>
-    .magicCardGridContainer
+  .magicCardGridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--MagicCardSize), 1fr));
+    max-width: calc(var(--MagicCardSize) * 5);
+    margin: auto;
+    justify-items: center;
+  }
 </style>

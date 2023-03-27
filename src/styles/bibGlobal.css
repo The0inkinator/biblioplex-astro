@@ -9,9 +9,13 @@
 
 /*SITEWIDE VALUES*/
 :root {
+  /*Colors*/
   --BibBlue: hsl(200 65% 72%);
   --BibBlueVar: hsl(200 65% 65%);
   --BibBlueOffWhite: hsl(200 60% 80%);
+  /*Sizes*/
+  --MagicCardSize: 12rem;
+  --NavCardSize: 12rem;
 }
 
 /*CUSTOM FONTS*/

@@ -1,111 +1,110 @@
 ---
-const {title, subtitle, imgNum, link} = Astro.props
+const { title, subtitle, imgNum, link } = Astro.props;
 ---
 
 <div class="navCardContainer">
-      <div class="navCard">
-        <div id={imgNum} class="navCardImage" />
-        <div class="overlay" />
-        <div class="navCardTitle">{title}</div>
-        <a href={link}></a>
-      </div>
-      <p class="navCardSubtitle">{subtitle}</p>
-    </div>
+  <div class="navCard">
+    <div id={imgNum} class="navCardImage"></div>
+    <div class="overlay"></div>
+    <div class="navCardTitle">{title}</div>
+    <a href={link}></a>
+  </div>
+  <p class="navCardSubtitle">{subtitle}</p>
+</div>
 
-    <style>
-        .navCard > a {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        }
-    .navCardContainer {
-  width: 12rem;
-  aspect-ratio: 1/1.65;
-}
+<style>
+  .navCard > a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .navCardContainer {
+    width: 12rem;
+    aspect-ratio: 1/1.65;
+  }
 
-.navCard {
-  width: 100%;
-  height: 85%;
-  position: relative;
-  clip-path: inset(0% round 8% 8% 8% 8%);
-}
+  .navCard {
+    width: 100%;
+    height: 85%;
+    position: relative;
+    clip-path: inset(0% round 8% 8% 8% 8%);
+  }
 
-.navCard > .overlay {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background-image: linear-gradient(to bottom, #0000 10%, #001 90%);
-  transition: background-image 0.25s;
-}
+  .navCard > .overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: linear-gradient(to bottom, #0000 10%, #001 90%);
+    transition: background-image 0.25s;
+  }
 
-.navCardImage {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s;
-  transform-origin: center center;
-}
+  .navCardImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s;
+    transform-origin: center center;
+  }
 
-.navCard > .navCardTitle {
-  align-self: end;
-}
+  .navCard > .navCardTitle {
+    align-self: end;
+  }
 
-.navCardTitle {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  bottom: 5%;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  font-family: Modern Sans, Arial, sans-serif;
-  color: white;
-  font-size: 130%;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  transition: bottom 0.25s;
-}
+  .navCardTitle {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 5%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-family: Modern Sans, Arial, sans-serif;
+    color: white;
+    font-size: 130%;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    transition: bottom 0.25s;
+  }
 
-.navCardSubtitle {
-  width: 100%;
-  text-align: center;
-  padding-top: 0.4rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  font-family: Modern Sans, Arial, sans-serif;
-  color: hsl(0 0% 70%);
-  font-size: 100%;
-  font-weight: bold;
-  overflow: clip;
-  transition: color 0.75s, font-size 0.75s;
-}
+  .navCardSubtitle {
+    width: 100%;
+    text-align: center;
+    padding-top: 0.4rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-family: Modern Sans, Arial, sans-serif;
+    color: hsl(0 0% 70%);
+    font-size: 100%;
+    font-weight: bold;
+    overflow: clip;
+    transition: color 0.75s, font-size 0.75s;
+  }
 
-/*Hover Transforms*/
+  /*Hover Transforms*/
 
-.navCard:hover {
-  cursor: pointer;
-}
+  .navCard:hover {
+    cursor: pointer;
+  }
 
-.navCard:hover > .navCardImage {
-  transform: scale(1.05);
-}
+  .navCard:hover > .navCardImage {
+    transform: scale(1.05);
+  }
 
-.navCard:hover > .navCardTitle {
-  bottom: 7%;
-}
+  .navCard:hover > .navCardTitle {
+    bottom: 7%;
+  }
 
-.navCard:hover > .navCardOverlay {
-  background-image: linear-gradient(to bottom, #0000 10%, #001 87%);
-}
+  .navCard:hover > .navCardOverlay {
+    background-image: linear-gradient(to bottom, #0000 10%, #001 87%);
+  }
 
-.navCard:hover ~ .navCardSubtitle {
-  color: hsl(0 0% 40%);
-  font-size: 1.02rem;
-}
+  .navCard:hover ~ .navCardSubtitle {
+    color: hsl(0 0% 40%);
+    font-size: 1.02rem;
+  }
 
-#image2 {
-  background-image: url("https://cards.scryfall.io/art_crop/front/b/8/b8d58c2d-2bff-4d25-a023-0a6342167f5f.jpg?1674142441");
-}
-
+  #image2 {
+    background-image: url("https://cards.scryfall.io/art_crop/front/b/8/b8d58c2d-2bff-4d25-a023-0a6342167f5f.jpg?1674142441");
+  }
 </style>
