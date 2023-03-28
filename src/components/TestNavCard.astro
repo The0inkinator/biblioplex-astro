@@ -17,6 +17,7 @@ const { title, subtitle, imgNum, link } = Astro.props;
 <style>
   .navCardContainer {
     width: 100%;
+    max-width: calc(var(--NavCardSize) * 1.5);
     aspect-ratio: 1/1.65;
   }
   .navCard > a {

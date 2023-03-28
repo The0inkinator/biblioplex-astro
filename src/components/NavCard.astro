@@ -13,13 +13,15 @@ const { title, subtitle, imgNum, link } = Astro.props;
 </div>
 
 <style>
-  .navCardContainer {
-    width: 100%;
-    aspect-ratio: 1/1.65;
-  }
   .navCard > a {
     width: 100%;
     height: 100%;
+    position: absolute;
+  }
+  .navCardContainer {
+    width: 100%;
+    max-width: calc(var(--NavCardSize) * 1.5);
+    aspect-ratio: 1/1.65;
   }
 
   .navCard {
@@ -60,9 +62,10 @@ const { title, subtitle, imgNum, link } = Astro.props;
     color: white;
     font-size: 130%;
     font-weight: bold;
-    align-self: end;
-    margin-bottom: 10%;
-    transition: margin-bottom 0.5s;
+    letter-spacing: 0.1rem;
+    transform-origin: center center;
+    transform: translateY(500%);
+    transition: transform 0.5s;
   }
 
   .navCardSubtitle {
@@ -76,6 +79,7 @@ const { title, subtitle, imgNum, link } = Astro.props;
     font-size: 100%;
     font-weight: bold;
     overflow: clip;
+    transition: color 0.75s, font-size 0.75s;
   }
 
   /*Hover Transforms*/
@@ -89,7 +93,7 @@ const { title, subtitle, imgNum, link } = Astro.props;
   }
 
   .navCard:hover > .navCardTitle {
-    margin-bottom: 13%;
+    transform: translateY(480%);
   }
 
   .navCard:hover > .navCardOverlay {
