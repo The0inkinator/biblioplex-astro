@@ -50,11 +50,12 @@ import NavCard from "./NavCard.astro";
   .navCardGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(var(--NavCardSize), 1fr));
-    max-width: calc((var(--NavCardSize) * 5) + (var(--NavCardSize) * 5 * 0.2));
+    max-width: calc(
+      (var(--NavCardSize) * 5) + (var(--NavCardSize) * 5 * 0.2) + 4rem
+    );
     margin: auto;
-    margin-inline: 2rem;
     gap: 1rem;
-    padding-inline: calc((var(--NavCardSize) * 5 * 0.1) + 4);
+    padding-inline: calc(var(--NavCardSize) * 5 * 0.1);
     justify-items: center;
   }
 </style>
