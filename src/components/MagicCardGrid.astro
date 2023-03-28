@@ -30,8 +30,11 @@ import MagicCard from "./MagicCard.astro";
   .magicCardGridContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(var(--MagicCardSize), 1fr));
-    max-width: calc(var(--MagicCardSize) * 5);
+    max-width: calc(
+      calc(var(--MagicCardSize) * 5) + calc(var(--MagicCardSize) * 5 * 0.1)
+    );
     margin: auto;
+    padding-inline: calc(var(--MagicCardSize) * 5 * 0.05);
     justify-items: center;
   }
 </style>
