@@ -4,7 +4,12 @@ const { title, subtitle, imgSrc, link } = Astro.props;
 
 <div class="navCardContainer">
   <div class="navCard">
-    <div id={imgSrc} class="navCardImage"></div>
+    <div
+      id={imgSrc}
+      style=`background-color: url(${imgSrc});`
+      class="navCardImage"
+    >
+    </div>
     <div class="overlay"></div>
     <div class="navCardTitle">{title}</div>
     <a href={link}></a>

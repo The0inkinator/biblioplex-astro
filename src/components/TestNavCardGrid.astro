@@ -1,29 +1,22 @@
 ---
 import TestNavCard from "./TestNavCard.astro";
 import { BgColors } from "../scripts/lists";
-import { mainPageGrouping1 } from "../scripts/mainPageGrouping1";
+import { mainPageGrouping } from "../scripts/lists";
 ---
 
 <div class="navCardGrid">
-  <script is:inline>
-    console.log("Hello");
-    import { mainPageGrouping1 } from "../scripts/mainPageGrouping1";
-    mainPageGrouping1.map((GenNavCard) => {
-      <TestNavCard
-        title={GenNavCard.title}
-        subtitle={GenNavCard.subtitle}
-        imgSrc={GenNavCard.imgSrc}
-        link={GenNavCard.link}
-      />;
-    });
-  </script>
-
-  <script>
-    import { mainPageGrouping1 } from "../scripts/mainPageGrouping1";
-    mainPageGrouping1.map((GenNavCard) => {
-      console.log(`${GenNavCard.imgSrc}`);
-    });
-  </script>
+  {
+    mainPageGrouping.map((GenNavCard) => {
+      return (
+        <TestNavCard
+          title={GenNavCard.title}
+          subtitle={GenNavCard.subtitle}
+          imgSrc={GenNavCard.imgSrc}
+          link={GenNavCard.link}
+        />
+      );
+    })
+  }
 
   <TestNavCard
     title="One"
