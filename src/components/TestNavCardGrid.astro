@@ -1,0 +1,85 @@
+---
+import TestNavCard from "./TestNavCard.astro";
+import { BgColors } from "../scripts/lists";
+---
+
+<div class="navCardGrid">
+  <TestNavCard
+    title="One"
+    subtitle="A valid subtitle"
+    imgNum="image2"
+    link="Archives"
+  />
+
+  <TestNavCard
+    title="One"
+    subtitle="A valid subtitle"
+    imgNum="image2"
+    link="Archives"
+  />
+
+  <TestNavCard
+    title="One"
+    subtitle="A valid subtitle"
+    imgNum="image2"
+    link="Archives"
+  />
+
+  <TestNavCard
+    title="One"
+    subtitle="A valid subtitle"
+    imgNum="image2"
+    link="Archives"
+  />
+
+  <TestNavCard
+    title="One"
+    subtitle="A valid subtitle"
+    imgNum="image2"
+    link="Archives"
+  />
+
+  <TestNavCard
+    title="One"
+    subtitle="A valid subtitle"
+    imgNum="image2"
+    link="Archives"
+  />
+</div>
+
+<div class="testContainer">
+  {BgColors.map((color) => <div id={color} class="testBox" />)}
+  <script>
+    import { BgColors } from "../scripts/lists";
+    BgColors.forEach((color) => {
+      const Color = document.getElementById(color);
+      Color.style.backgroundImage = `url(${color})`;
+    });
+  </script>
+</div>
+
+<style>
+  .testBox {
+    border: solid black;
+    width: 100%;
+  }
+  .testContainer {
+    background-color: antiquewhite;
+    margin: auto;
+    height: 6rem;
+    width: 30rem;
+    display: flex;
+    gap: 1rem;
+  }
+  .navCardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--NavCardSize), 1fr));
+    max-width: calc(
+      (var(--NavCardSize) * 5) + (var(--NavCardSize) * 5 * 0.2) + 4rem
+    );
+    margin: auto;
+    gap: 1rem;
+    padding-inline: calc(var(--NavCardSize) * 5 * 0.1);
+    justify-items: center;
+  }
+</style>
