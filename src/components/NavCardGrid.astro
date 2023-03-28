@@ -3,69 +3,57 @@ import NavCard from "./NavCard.astro";
 ---
 
 <div class="navCardGrid">
-  <div class="navCardGridItem">
-    <NavCard
-      title="One"
-      subtitle="A valid subtitle"
-      imgNum="image2"
-      link="Archives"
-    />
-  </div>
-  <div class="navCardGridItem2">
-    <NavCard
-      title="One"
-      subtitle="A valid subtitle"
-      imgNum="image2"
-      link="Archives"
-    />
-  </div>
-  <div class="navCardGridItem3">
-    <NavCard
-      title="One"
-      subtitle="A valid subtitle"
-      imgNum="image2"
-      link="Archives"
-    />
-  </div>
-  <div class="navCardGridItem3">
-    <NavCard
-      title="One"
-      subtitle="A valid subtitle"
-      imgNum="image2"
-      link="Archives"
-    />
-  </div>
-  <div class="navCardGridItem3">
-    <NavCard
-      title="One"
-      subtitle="A valid subtitle"
-      imgNum="image2"
-      link="Archives"
-    />
-  </div>
-  <div class="navCardGridItem3">
-    <NavCard
-      title="One"
-      subtitle="A valid subtitle"
-      imgNum="image2"
-      link="Archives"
-    />
-  </div>
+  <NavCard
+    title="One"
+    subtitle="A valid subtitle"
+    imgNum="image2"
+    link="Archives"
+  />
+
+  <NavCard
+    title="One"
+    subtitle="A valid subtitle"
+    imgNum="image2"
+    link="Archives"
+  />
+
+  <NavCard
+    title="One"
+    subtitle="A valid subtitle"
+    imgNum="image2"
+    link="Archives"
+  />
+
+  <NavCard
+    title="One"
+    subtitle="A valid subtitle"
+    imgNum="image2"
+    link="Archives"
+  />
+
+  <NavCard
+    title="One"
+    subtitle="A valid subtitle"
+    imgNum="image2"
+    link="Archives"
+  />
+
+  <NavCard
+    title="One"
+    subtitle="A valid subtitle"
+    imgNum="image2"
+    link="Archives"
+  />
 </div>
 
 <style>
-  :root {
-    --columnCount: 5;
-  }
-
   .navCardGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-    gap: 2rem;
-    max-width: 80rem;
-    padding-inline: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(var(--NavCardSize), 1fr));
+    max-width: calc((var(--NavCardSize) * 5) + (var(--NavCardSize) * 5 * 0.2));
+    margin: auto;
+    gap: 1rem;
+    padding-inline: calc((var(--NavCardSize) * 5 * 0.1) + 4);
     justify-items: center;
-    align-items: center;
-    margin-inline: auto;
   }
 </style>

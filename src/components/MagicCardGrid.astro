@@ -31,10 +31,10 @@ import MagicCard from "./MagicCard.astro";
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(var(--MagicCardSize), 1fr));
     max-width: calc(
-      calc(var(--MagicCardSize) * 5) + calc(var(--MagicCardSize) * 5 * 0.1)
+      (var(--MagicCardSize) * 5) + (var(--MagicCardSize) * 5 * 0.2)
     );
     margin: auto;
-    padding-inline: calc(var(--MagicCardSize) * 5 * 0.05);
+    padding-inline: calc((var(--MagicCardSize) * 5) * 0.1);
     justify-items: center;
   }
 </style>
