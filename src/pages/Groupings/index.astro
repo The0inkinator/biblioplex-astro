@@ -1,0 +1,18 @@
+---
+import MagicCardGrid from "../../components/MagicCardGrid.astro";
+import NavCardGrid from "../../components/NavCardGrid.astro";
+import BibBaseLayout from "../../layouts/BibBaseLayout.astro";
+import "../../styles/bibGlobal.css";
+const pageTitle = "Groupings";
+---
+
+<BibBaseLayout pageTitle={pageTitle}>
+  <div></div>
+  <NavCardGrid />
+</BibBaseLayout>
+
+<style>
+  div {
+    margin-top: 2rem;
+  }
+</style>

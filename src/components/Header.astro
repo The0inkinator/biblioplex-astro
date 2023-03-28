@@ -1,54 +1,51 @@
 ---
-import "../styles/bibGlobal.css"
+import "../styles/bibGlobal.css";
 ---
-<header>
-    <div class="headerBar">
-        <a href="/" class="logo"></a>
-        <ul class="headerMenu">
-            <li class="headerMenuItem"><a href="/">Start Searching</a></li>
-            <li class="headerMenuItem"><a href="/Archives">Archives</a></li>
-            <li class="headerMenuItem"><a href="/Account">Account</a></li>
-        </ul>
 
-    </div>
+<header>
+  <div class="headerBar">
+    <a href="/" class="logo"></a>
+    <ul class="headerMenu">
+      <li class="headerMenuItem"><a href="/">Start Searching</a></li>
+      <li class="headerMenuItem"><a href="/Archives">Archives</a></li>
+      <li class="headerMenuItem"><a href="/Account">Account</a></li>
+      <li class="headerMenuItem"><a href="/Groupings">Groupings</a></li>
+    </ul>
+  </div>
 </header>
 
 <style>
-.headerBar {
+  .headerBar {
     height: 7rem;
     background: linear-gradient(to bottom, var(--BibBlue), var(--BibBlueVar));
     display: flex;
     align-items: center;
     font-family: Modern Sans, Arial, sans-serif;
+  }
 
-}
-
-.logo {
+  .logo {
     background-image: url("public/biblioplexLogo.svg");
     height: 60%;
     aspect-ratio: 1/1;
     margin: 1.5rem;
     cursor: pointer;
-}
+  }
 
-.headerMenu {
+  .headerMenu {
     list-style: none;
     display: flex;
     gap: 1.5rem;
     font-size: 1.3rem;
     font-weight: 700;
-    
-}
+  }
 
-.headerMenuItem {
+  .headerMenuItem {
     cursor: pointer;
     color: white;
     transition: color 0.25s;
-}
+  }
 
-.headerMenuItem:hover {
+  .headerMenuItem:hover {
     color: hsl(200, 50%, 34%);
-}
-
-
+  }
 </style>
