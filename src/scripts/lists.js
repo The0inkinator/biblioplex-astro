@@ -1,15 +1,4 @@
-export const BgColors = [
-  "https://cards.scryfall.io/art_crop/front/b/8/b8d58c2d-2bff-4d25-a023-0a6342167f5f.jpg?1674142441",
-  "black",
-  "red",
-];
-
-export const testGrouping = [
-  { name: "Item 1", color: "red" },
-  { name: "Item 2", color: "blue" },
-];
-
-export const mainPageGrouping = [
+export const primaryGrouping = [
   {
     title: "Lands",
     subtitle: "Lands subtitle",
