@@ -1,12 +1,15 @@
 ---
-const { title, subtitle, imgNum, link } = Astro.props;
+const { title, subtitle, imgSrc, link } = Astro.props;
 ---
 
 <div class="navCardContainer">
   <div class="navCard">
-    <div id={imgNum} class="navCardImage"></div>
-
-    <script></script>
+    <div
+      id={imgSrc}
+      style=`background-image: url(${imgSrc});`
+      class="navCardImage"
+    >
+    </div>
     <div class="overlay"></div>
     <div class="navCardTitle">{title}</div>
     <a href={link}></a>
@@ -17,6 +20,7 @@ const { title, subtitle, imgNum, link } = Astro.props;
 <style>
   .navCardContainer {
     width: 100%;
+    max-width: calc(var(--NavCardSize) * 1.5);
     aspect-ratio: 1/1.65;
   }
   .navCard > a {

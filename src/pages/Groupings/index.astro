@@ -1,6 +1,5 @@
 ---
-import MagicCardGrid from "../../components/MagicCardGrid.astro";
-import NavCardGrid from "../../components/NavCardGrid.astro";
+import TestNavCardGrid from "../../components/TestNavCardGrid.astro";
 import BibBaseLayout from "../../layouts/BibBaseLayout.astro";
 import "../../styles/bibGlobal.css";
 const pageTitle = "Groupings";
@@ -8,7 +7,7 @@ const pageTitle = "Groupings";
 
 <BibBaseLayout pageTitle={pageTitle}>
   <div></div>
-  <NavCardGrid />
+  <TestNavCardGrid NavCardList="NavCardList" />
 </BibBaseLayout>
 
 <style>

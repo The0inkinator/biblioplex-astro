@@ -1,0 +1,34 @@
+---
+import TestNavCard from "./TestNavCard.astro";
+import { primaryGrouping } from "../scripts/lists";
+const { NavCardList } = Astro.props;
+---
+
+<div class="navCardGrid">
+  {
+    primaryGrouping.map((GenNavCard) => {
+      return (
+        <TestNavCard
+          title={GenNavCard.title}
+          subtitle={GenNavCard.subtitle}
+          imgSrc={GenNavCard.imgSrc}
+          link={GenNavCard.link}
+        />
+      );
+    })
+  }
+</div>
+
+<style>
+  .navCardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--NavCardSize), 1fr));
+    max-width: calc(
+      (var(--NavCardSize) * 5) + (var(--NavCardSize) * 5 * 0.2) + 4rem
+    );
+    margin: auto;
+    gap: 1rem;
+    padding-inline: calc(var(--NavCardSize) * 5 * 0.1);
+    justify-items: center;
+  }
+</style>
