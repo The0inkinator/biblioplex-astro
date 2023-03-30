@@ -1,11 +1,16 @@
 ---
 import MagicCard from "./MagicCard.astro";
+const { MtgCardList } = Astro.props;
 ---
 
 <div class="magicCardGridContainer">
-  <MagicCard
-    cardIMGURL="https://cards.scryfall.io/large/front/7/8/78fb8900-d28d-4e33-96a7-66fcbc117adf.jpg?1634348984"
-  />
+  {
+    MtgCardList.map((GenCardImg) => {
+      console.log(GenCardImg.imgSrc);
+    })
+  }
+
+  <MagicCard cardIMGURL=`${MtgCardList.link}` />
   <MagicCard
     cardIMGURL="https://cards.scryfall.io/large/front/7/8/78fb8900-d28d-4e33-96a7-66fcbc117adf.jpg?1634348984"
   />
