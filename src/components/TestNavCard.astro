@@ -4,11 +4,7 @@ const { title, subtitle, imgSrc, link } = Astro.props;
 
 <div class="navCardContainer">
   <div class="navCard">
-    <div
-      id={imgSrc}
-      style=`background-image: url(${imgSrc});`
-      class="navCardImage"
-    >
+    <div style={{ backgroundImage: `url(${imgSrc})` }} class="navCardImage">
     </div>
     <div class="overlay"></div>
     <div class="navCardTitle">{title}</div>
@@ -22,6 +18,9 @@ const { title, subtitle, imgSrc, link } = Astro.props;
     width: 100%;
     max-width: calc(var(--NavCardSize) * 1.5);
     aspect-ratio: 1/1.65;
+    font-family: Modern Sans, Arial, sans-serif;
+    font-size: 130%;
+    /*calc((var(--NavCardSize) * 1.65 * 0.85) / 12) */
   }
   .navCard > a {
     width: 100%;
@@ -62,9 +61,7 @@ const { title, subtitle, imgSrc, link } = Astro.props;
     text-align: center;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    font-family: Modern Sans, Arial, sans-serif;
     color: white;
-    font-size: 130%;
     font-weight: bold;
     align-self: end;
     margin-bottom: 10%;
@@ -77,11 +74,10 @@ const { title, subtitle, imgSrc, link } = Astro.props;
     padding-top: 0.4rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    font-family: Modern Sans, Arial, sans-serif;
     color: hsl(0 0% 70%);
-    font-size: 100%;
     font-weight: bold;
     overflow: clip;
+    font-size: 80%;
   }
 
   /*Hover Transforms*/

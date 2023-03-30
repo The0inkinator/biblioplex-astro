@@ -1,7 +1,6 @@
 ---
 import TestNavCard from "./TestNavCard.astro";
 import { primaryGrouping } from "../scripts/lists";
-const { NavCardList } = Astro.props;
 ---
 
 <div class="navCardGrid">
@@ -29,6 +28,7 @@ const { NavCardList } = Astro.props;
     margin: auto;
     gap: 1rem;
     padding-inline: calc(var(--NavCardSize) * 5 * 0.1);
+    padding-block: 2rem;
     justify-items: center;
   }
 </style>

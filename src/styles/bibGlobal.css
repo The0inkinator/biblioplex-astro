@@ -16,16 +16,20 @@
   /*Sizes*/
   --MagicCardSize: 12rem;
   --NavCardSize: 12rem;
+  --footerHeight: 7rem;
 }
 
 /*CUSTOM FONTS*/
 
 @font-face {
   font-family: "Modern Sans";
-  src: url("../../public/ModernSans-Light.otf");
+  src: url("../ModernSans-Light.otf");
 }
 
 /*UNIVERSAL PAGE STYLE PROPERTIES*/
 .pageHeight {
-  min-height: calc(100vh - 14rem);
+  min-height: calc(100vh - var(--footerHeight));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
