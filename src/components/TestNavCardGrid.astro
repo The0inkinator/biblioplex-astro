@@ -1,20 +1,27 @@
 ---
 import TestNavCard from "./TestNavCard.astro";
-import { primaryGrouping } from "../scripts/lists";
+const { NavCardList } = Astro.props;
 ---
 
 <div class="navCardGrid">
   {
-    primaryGrouping.map((GenNavCard) => {
-      return (
-        <TestNavCard
-          title={GenNavCard.title}
-          subtitle={GenNavCard.subtitle}
-          imgSrc={GenNavCard.imgSrc}
-          link={GenNavCard.link}
-        />
-      );
-    })
+    NavCardList.map(
+      (GenNavCard: {
+        title: string;
+        subtitle: string;
+        imgSrc: string;
+        link: string;
+      }) => {
+        return (
+          <TestNavCard
+            title={GenNavCard.title}
+            subtitle={GenNavCard.subtitle}
+            imgSrc={GenNavCard.imgSrc}
+            link={GenNavCard.link}
+          />
+        );
+      }
+    )
   }
 </div>
 
