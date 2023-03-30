@@ -4,7 +4,8 @@ const { title, subtitle, imgSrc, link } = Astro.props;
 
 <div class="navCardContainer">
   <div class="navCard">
-    <div id={imgSrc} class="navCardImage"></div>
+    <div style={{ backgroundImage: `url(${imgSrc})` }} class="navCardImage">
+    </div>
     <div class="overlay"></div>
     <div class="navCardTitle">{title}</div>
     <a href={link}></a>
@@ -13,15 +14,17 @@ const { title, subtitle, imgSrc, link } = Astro.props;
 </div>
 
 <style>
-  .navCard > a {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  }
   .navCardContainer {
     width: 100%;
     max-width: calc(var(--NavCardSize) * 1.5);
     aspect-ratio: 1/1.65;
+    font-family: Modern Sans, Arial, sans-serif;
+    font-size: 130%;
+    /*calc((var(--NavCardSize) * 1.65 * 0.85) / 12) */
+  }
+  .navCard > a {
+    width: 100%;
+    height: 100%;
   }
 
   .navCard {
@@ -58,14 +61,11 @@ const { title, subtitle, imgSrc, link } = Astro.props;
     text-align: center;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    font-family: Modern Sans, Arial, sans-serif;
     color: white;
-    font-size: 130%;
     font-weight: bold;
-    letter-spacing: 0.1rem;
-    transform-origin: center center;
-    transform: translateY(500%);
-    transition: transform 0.5s;
+    align-self: end;
+    margin-bottom: 10%;
+    transition: margin-bottom 0.5s;
   }
 
   .navCardSubtitle {
@@ -74,12 +74,10 @@ const { title, subtitle, imgSrc, link } = Astro.props;
     padding-top: 0.4rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    font-family: Modern Sans, Arial, sans-serif;
     color: hsl(0 0% 70%);
-    font-size: 100%;
     font-weight: bold;
     overflow: clip;
-    transition: color 0.75s, font-size 0.75s;
+    font-size: 80%;
   }
 
   /*Hover Transforms*/
@@ -93,7 +91,7 @@ const { title, subtitle, imgSrc, link } = Astro.props;
   }
 
   .navCard:hover > .navCardTitle {
-    transform: translateY(480%);
+    margin-bottom: 13%;
   }
 
   .navCard:hover > .navCardOverlay {

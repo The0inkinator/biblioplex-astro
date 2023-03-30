@@ -1,49 +1,28 @@
 ---
 import NavCard from "./NavCard.astro";
+const { NavCardList } = Astro.props;
 ---
 
 <div class="navCardGrid">
-  <NavCard
-    title="One"
-    subtitle="A valid subtitle"
-    imgSrc="image2"
-    link="Archives"
-  />
-
-  <NavCard
-    title="One"
-    subtitle="A valid subtitle"
-    imgSrc="image2"
-    link="Archives"
-  />
-
-  <NavCard
-    title="One"
-    subtitle="A valid subtitle"
-    imgSrc="image2"
-    link="Archives"
-  />
-
-  <NavCard
-    title="One"
-    subtitle="A valid subtitle"
-    imgSrc="image2"
-    link="Archives"
-  />
-
-  <NavCard
-    title="One"
-    subtitle="A valid subtitle"
-    imgSrc="image2"
-    link="Archives"
-  />
-
-  <NavCard
-    title="One"
-    subtitle="A valid subtitle"
-    imgSrc="image2"
-    link="Archives"
-  />
+  {
+    NavCardList.map(
+      (GenNavCard: {
+        title: string;
+        subtitle: string;
+        imgSrc: string;
+        link: string;
+      }) => {
+        return (
+          <NavCard
+            title={GenNavCard.title}
+            subtitle={GenNavCard.subtitle}
+            imgSrc={GenNavCard.imgSrc}
+            link={GenNavCard.link}
+          />
+        );
+      }
+    )
+  }
 </div>
 
 <style>
