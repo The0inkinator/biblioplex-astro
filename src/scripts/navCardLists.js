@@ -1,4 +1,4 @@
-export const primaryGrouping = [
+export const startSearchingList = [
   {
     title: "Lands",
     subtitle: "Lands subtitle",
@@ -36,7 +36,7 @@ export const primaryGrouping = [
   },
 ];
 
-export const secondaryGrouping = [
+export const creaturesList = [
   {
     title: "#2",
     subtitle: "Lands subtitle",

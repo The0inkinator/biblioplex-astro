@@ -2,6 +2,8 @@
 import NavCardGrid from "../components/NavCardGrid.astro";
 import BibBaseLayout from "../layouts/BibBaseLayout.astro";
 const pageTitle = "Start Searching";
+import { startSearchingList } from "../scripts/navCardLists";
+const NavCardList = startSearchingList;
 ---
 
 <BibBaseLayout pageTitle={pageTitle}>
@@ -11,6 +13,7 @@ const pageTitle = "Start Searching";
       <div class="searchBarStyle"></div>
       <input type="text" placeholder="Begin here..." />
     </div>
+    <NavCardGrid NavCardList={NavCardList} />
   </header>
 </BibBaseLayout>
 
