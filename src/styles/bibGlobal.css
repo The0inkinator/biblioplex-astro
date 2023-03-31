@@ -15,8 +15,11 @@
   --BibBlueOffWhite: hsl(200 60% 80%);
   /*Sizes*/
   --MagicCardSize: 12rem;
-  --NavCardSize: 12rem;
-  --footerHeight: 7rem;
+  --NavCardSize: 15rem;
+  --FooterHeight: 7rem;
+  /*Gaps*/
+  --LargeGap: 4rem;
+  --SmallGap: 2rem;
 }
 
 /*CUSTOM FONTS*/
@@ -28,8 +31,14 @@
 
 /*UNIVERSAL PAGE STYLE PROPERTIES*/
 .pageHeight {
-  min-height: calc(100vh - var(--footerHeight));
+  min-height: calc(100vh - var(--FooterHeight));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+@media (width < 500px) {
+  :root {
+    --NavCardSize: 9rem;
+  }
 }
