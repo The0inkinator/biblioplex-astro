@@ -27,20 +27,23 @@ const NavCardList = startSearchingList;
 
   h1 {
     font-family: Modern Sans, arial, sans-serif;
-    font-size: 6rem;
+    font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 800;
-    margin-block: 3rem;
+    margin-block: var(--LargeGap);
     background-image: linear-gradient(to top, white, 40%, var(--BibBlue));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    width: 80vw;
+    text-align: center;
   }
 
   .searchBarContainer {
     height: 3rem;
-    width: 35rem;
+    width: 75vw;
+    max-width: 35rem;
     display: grid;
-    margin-bottom: 4rem;
+
   }
 
   .searchBarContainer > * {

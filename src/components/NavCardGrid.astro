@@ -49,10 +49,11 @@ const { NavCardList } = Astro.props;
 <style>
   .navCardGrid {
     display: grid;
+    width: 75vw;
     grid-template-columns: repeat(auto-fit, minmax(var(--NavCardSize), 1fr));
-    padding-inline: 10vw;
-    padding-block: var(--SmallGap);
+    padding-block: var(--LargeGap);
     margin: auto;
     justify-items: center;
   }
+
 </style>
