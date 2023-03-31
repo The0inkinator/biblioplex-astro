@@ -2,10 +2,6 @@
 import NavCardGrid from "../../components/NavCardGrid.astro";
 import BibBaseLayout from "../../layouts/BibBaseLayout.astro";
 const pageTitle = "Groupings";
-import { primaryGrouping } from "../../scripts/navCardLists";
-const NavCardList = primaryGrouping;
 ---
 
-<BibBaseLayout pageTitle={pageTitle}>
-  <NavCardGrid NavCardList={NavCardList} />
-</BibBaseLayout>
+<BibBaseLayout pageTitle={pageTitle} />
