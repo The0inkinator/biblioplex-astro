@@ -1,16 +1,18 @@
 ---
-const { cardIMGURL } = Astro.props;
+const { cardIMGURL, cardLink } = Astro.props;
 ---
 
 <div class="MagicCardContainer">
-  <img src={cardIMGURL} class="MagicCardImage" />
-  <a href="/"></a>
+  <div style={{ backgroundImage: `url(${cardIMGURL})` }} class="MagicCardImage">
+  </div>
+  <a href={`${cardLink}`}></a>
 </div>
 
 <style>
   .MagicCardContainer {
     display: grid;
     width: 100%;
+    min-width: var(--MagicCardSize);
     aspect-ratio: 2.5/3.5;
     padding: 1%;
   }
@@ -24,6 +26,9 @@ const { cardIMGURL } = Astro.props;
     width: 100%;
     height: 100%;
     clip-path: inset(0% round 4% 4% 4% 4%);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
   }
 
   a {
