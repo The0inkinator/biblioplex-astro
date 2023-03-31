@@ -1,0 +1,13 @@
+---
+import MagicCardGrid from "../../../components/MagicCardGrid.astro";
+import BibBaseLayout from "../../../layouts/BibBaseLayout.astro";
+
+const pageTitle = "Creatures-CA";
+
+import { a11List } from "../../../scripts/magicCardLists";
+const MtgCardList = a11List;
+---
+
+<BibBaseLayout pageTitle={pageTitle}>
+  <MagicCardGrid MtgCardList={MtgCardList} />
+</BibBaseLayout>

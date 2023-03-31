@@ -1,0 +1,11 @@
+---
+import NavCardGrid from "../../components/NavCardGrid.astro";
+import BibBaseLayout from "../../layouts/BibBaseLayout.astro";
+const pageTitle = "Creatures";
+import { creaturesList } from "../../scripts/navCardLists";
+const NavCardList = creaturesList;
+---
+
+<BibBaseLayout pageTitle={pageTitle}>
+  <NavCardGrid NavCardList={NavCardList} />
+</BibBaseLayout>
