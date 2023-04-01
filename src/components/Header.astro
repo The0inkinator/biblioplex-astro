@@ -4,47 +4,105 @@ import "../styles/bibGlobal.css";
 
 <header>
   <div class="headerBar">
+    <div class="favoritesButtonContainer">
+      <a class="favoritesIcon"></a>
+      <a class="favoritesText">Favorites</a>
+    </div>
     <a href="/" class="logo"></a>
-    <ul class="headerMenu">
-      <li class="headerMenuItem"><a href="/">Start Searching</a></li>
-      <li class="headerMenuItem"><a href="/Archives">Archives</a></li>
-      <li class="headerMenuItem"><a href="/Account">Account</a></li>
-    </ul>
+    <div class="accountButtonContainer">
+      <a href="/Account" class="accountIcon"></a>
+      <a href="/Account" class="accountText">My Account</a>
+    </div>
   </div>
 </header>
 
 <style>
   .headerBar {
-    height: 7rem;
-    background: linear-gradient(to bottom, var(--BibBlue), var(--BibBlueVar));
-    display: flex;
-    align-items: center;
+    height: var(--HeaderHeight);
     font-family: Modern Sans, Arial, sans-serif;
+    background: linear-gradient(to bottom, var(--BibBlue), var(--BibBlueVar));
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .logo {
-    background-image: url("/biblioplexLogo.svg");
+    grid-column: 2;
+    justify-self: center;
+    background-image: url("/logos/biblioplexLogo.svg");
     height: 60%;
     aspect-ratio: 1/1;
-    margin: 1.5rem;
+    margin-block: auto;
     cursor: pointer;
   }
-
-  .headerMenu {
-    list-style: none;
+  .accountButtonContainer {
+    grid-column: 3;
     display: flex;
-    gap: 1.5rem;
+    flex-direction: row-reverse;
+    height: calc(0.3 * var(--HeaderHeight));
+    margin-inline: var(--SmallGap);
+    margin-block: auto;
+  }
+
+  .accountIcon {
+    align-self: center;
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-image: url("/logos/accountIcon.svg");
+    background-size: cover;
+    margin-left: 1rem;
+    transition: background-image 0.25s;
+  }
+
+  .accountButtonContainer:hover > .accountIcon {
+    background-image: url("/logos/accountIconHovered.svg");
+  }
+  .accountText {
+    color: white;
+    align-self: center;
+    text-align: right;
     font-size: 1.3rem;
     font-weight: 700;
-  }
-
-  .headerMenuItem {
-    cursor: pointer;
-    color: white;
+    white-space: nowrap;
     transition: color 0.25s;
   }
 
-  .headerMenuItem:hover {
-    color: hsl(200, 50%, 34%);
+  .accountButtonContainer:hover > .accountText {
+    color: var(--HoveredMenu);
+  }
+
+  .favoritesButtonContainer {
+    grid-column: 1;
+    display: flex;
+    height: calc(0.3 * var(--HeaderHeight));
+    margin-inline: var(--SmallGap);
+    margin-block: auto;
+  }
+
+  .favoritesIcon {
+    align-self: center;
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-image: url("/logos/favoritesIcon.svg");
+    background-size: cover;
+    margin-right: 1rem;
+    transition: background-image 0.25s;
+  }
+
+  .favoritesButtonContainer:hover > .favoritesIcon {
+    background-image: url("/logos/favoritesIconHovered.svg");
+    cursor: pointer;
+  }
+  .favoritesText {
+    color: white;
+    align-self: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: color 0.25s;
+  }
+
+  .favoritesButtonContainer:hover > .favoritesText {
+    color: var(--HoveredMenu);
+    cursor: pointer;
   }
 </style>
