@@ -17,11 +17,10 @@ const { title, subtitle, imgSrc, link } = Astro.props;
 
 <style>
   .navCardContainer {
-    width: 100%;
+    width: var(--NavCardSize);
     max-width: calc(var(--NavCardSize) * 1.4);
     display: grid;
   }
-  /* clamp(var(--NavCardSize) / 2, 100%, var(--NavCardSize) * 1.2)*/
   .navCardContainer > * {
     grid-row: 1;
     grid-column: 1;
