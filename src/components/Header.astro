@@ -4,9 +4,9 @@ import "../styles/bibGlobal.css";
 
 <header>
   <div class="headerBar">
-    <div class="favoritesButtonContainer">
-      <a class="favoritesIcon"></a>
-      <a class="favoritesText">Favorites</a>
+    <div class="bookmarksButtonContainer">
+      <a class="bookmarksIcon"></a>
+      <a class="bookmarksText">Bookmarks</a>
     </div>
     <a href="/" class="logo"></a>
     <div class="accountButtonContainer">
@@ -70,7 +70,7 @@ import "../styles/bibGlobal.css";
     color: var(--HoveredMenu);
   }
 
-  .favoritesButtonContainer {
+  .bookmarksButtonContainer {
     grid-column: 1;
     display: flex;
     height: calc(0.3 * var(--HeaderHeight));
@@ -78,21 +78,21 @@ import "../styles/bibGlobal.css";
     margin-block: auto;
   }
 
-  .favoritesIcon {
+  .bookmarksIcon {
     align-self: center;
     height: 100%;
     aspect-ratio: 1/1;
-    background-image: url("/logos/favoritesIcon.svg");
+    background-image: url("/logos/bookmarksIcon.svg");
     background-size: cover;
     margin-right: 1rem;
     transition: background-image 0.25s;
   }
 
-  .favoritesButtonContainer:hover > .favoritesIcon {
-    background-image: url("/logos/favoritesIconHovered.svg");
+  .bookmarksButtonContainer:hover > .bookmarksIcon {
+    background-image: url("/logos/bookmarksIconHovered.svg");
     cursor: pointer;
   }
-  .favoritesText {
+  .bookmarksText {
     color: white;
     align-self: center;
     font-size: 1.3rem;
@@ -101,13 +101,13 @@ import "../styles/bibGlobal.css";
     transition: color 0.25s;
   }
 
-  .favoritesButtonContainer:hover > .favoritesText {
+  .bookmarksButtonContainer:hover > .bookmarksText {
     color: var(--HoveredMenu);
     cursor: pointer;
   }
 
   @media (width < 500px) {
-    .favoritesText,
+    .bookmarksText,
     .accountText {
       display: none;
     }
